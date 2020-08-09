@@ -1,1 +1,13 @@
 学习笔记
+###HashMap
+####putVal步骤：
++ 数组为空的情况下resize() 
++ 根据(n - 1) & hash查找Node,不存在就直接设置
++ hash相等并且key相等，设置新的value 
++ 如果节点是TreeNode，则加入树中 
++ 如果节点是链表，则加入链表，超出阈值8则树化
+ 
+####get
++ 根据(n - 1) & hash查找Node,存在就直接返回
++ 如果节点的next不为null，判断是否是TreeNode,是则调用树中查找的方法
++ 不是则遍历链表，找到key相同的节点
