@@ -8,7 +8,7 @@ public class TwoSum {
     public static void main(String[] args) {
         int[] nums = {1, 2, 3, 4, 5, 6, 7, -5};
         int target = 0;
-        int[] result = new TwoSum().practice1(nums, target);
+        int[] result = new TwoSum().solution(nums, target);
         Arrays.stream(result).forEach(System.out::println);
     }
 

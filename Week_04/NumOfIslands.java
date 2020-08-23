@@ -33,8 +33,11 @@ public class NumOfIslands {
             return 0;
         }
 
+        //行
         int nr = grid.length;
+        //列
         int nc = grid[0].length;
+        //岛屿数量
         int num_islands = 0;
         for (int r = 0; r < nr; ++r) {
             for (int c = 0; c < nc; ++c) {
@@ -56,6 +59,7 @@ public class NumOfIslands {
             return;
         }
 
+        //标记为0
         grid[r][c] = '0';
         dfs(grid, r - 1, c);
         dfs(grid, r + 1, c);
